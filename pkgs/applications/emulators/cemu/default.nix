@@ -1,6 +1,6 @@
 { lib, stdenv, fetchFromGitHub
 , addOpenGLRunpath
-, wrapGAppsHook
+, wrapGAppsHook3
 , cmake
 , glslang
 , nasm
@@ -46,13 +46,13 @@ let
 
 in stdenv.mkDerivation rec {
   pname = "cemu";
-  version = "2.0-72";
+  version = "2.0-82";
 
   src = fetchFromGitHub {
     owner = "cemu-project";
     repo = "Cemu";
     rev = "v${version}";
-    hash = "sha256-4sy2pI+pOJ69JntfktrcXd00yL3fkQI14K02j0l4cuI=";
+    hash = "sha256-rmlkit7ZNUM0ErqoclivfBHolV0tRWyToLmsvoTslbI=";
   };
 
   patches = [
@@ -64,7 +64,7 @@ in stdenv.mkDerivation rec {
 
   nativeBuildInputs = [
     addOpenGLRunpath
-    wrapGAppsHook
+    wrapGAppsHook3
     cmake
     glslang
     nasm

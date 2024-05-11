@@ -11,11 +11,11 @@
 }:
 let
   pname = "beeper";
-  version = "3.101.24";
+  version = "3.104.7";
   name = "${pname}-${version}";
   src = fetchurl {
-    url = "https://download.todesktop.com/2003241lzgn20jd/beeper-3.101.24-build-240322frr3t3orv-x86_64.AppImage";
-    hash = "sha256-yfkWvPYQhI8cfXfmmyi2LoSro1jxJRWy9phycv5TUL8=";
+    url = "https://download.todesktop.com/2003241lzgn20jd/beeper-3.104.7-build-2405024h1b4qoap-x86_64.AppImage";
+    hash = "sha256-VjN9bKxFokExEjMGz42d/VVwVWJzowI42ONsNyXEbnc=";
   };
   appimage = appimageTools.wrapType2 {
     inherit version pname src;
@@ -34,8 +34,6 @@ stdenvNoCC.mkDerivation rec {
 
   installPhase = ''
     runHook preInstall
-
-    mv bin/${name} bin/${pname}
 
     mkdir -p $out/
     cp -r bin $out/bin
