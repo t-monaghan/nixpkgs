@@ -10,6 +10,7 @@
   "@angular/cli" = "ng";
   "@babel/cli" = "babel";
   "@commitlint/cli" = "commitlint";
+  "@changesets/cli" = "changeset";
   "@gitbeaker/cli" = "gitbeaker";
   "@prisma/language-server" = "prisma-language-server";
   "@uppy/companion" = "companion";
