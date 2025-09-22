@@ -7,7 +7,11 @@
 }:
 buildGoModule rec {
   pname = "sesh";
+<<<<<<< Updated upstream
   version = "2.17.1";
+=======
+  version = "2.18.1";
+>>>>>>> Stashed changes
 
   nativeBuildInputs = [
     go-mockery
@@ -16,7 +20,11 @@ buildGoModule rec {
     owner = "joshmedeski";
     repo = "sesh";
     rev = "v${version}";
+<<<<<<< Updated upstream
     hash = "sha256-olt61AR/Tq8lLh65V0/+GDrWjCi9hrkNbHR9LOX7kY0=";
+=======
+    hash = "sha256-f63C2QFU5G/xoy6mLUSzgQv7VOJ4lv06OnGoyZy54rg=";
+>>>>>>> Stashed changes
   };
 
   preBuild = ''
@@ -30,8 +38,8 @@ buildGoModule rec {
     "-X main.version=${version}"
   ];
 
-  nativeInstallCheckInputs = [ versionCheckHook ];
-  versionCheckKeepEnvironment = [ "HOME" ];
+  nativeInstallCheckInputs = [versionCheckHook];
+  versionCheckKeepEnvironment = ["HOME"];
   doInstallCheck = true;
 
   meta = {
